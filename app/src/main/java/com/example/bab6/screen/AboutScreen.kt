@@ -20,7 +20,7 @@ fun AboutScreen(onBack: () -> Unit) {
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
 
-        Text("Profile", style = MaterialTheme.typography.headlineMedium)
+        Text("About", style = MaterialTheme.typography.headlineMedium)
         Text("Welcome to 'About' Screen!")
         Button(onClick = onBack) { Text("Kembali") }
     }

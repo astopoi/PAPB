@@ -1,0 +1,5 @@
+Validasi akhir: BUILD SUCCESSFUL — assembleDebug testDebugUnitTest lintDebug
+Perangkat: Samsung SM-A325F (HP fisik)
+Koneksi setelah pengujian: wifi_on=1; mobile_data=1
+com.example.bab6.ExampleUnitTest: tests=1, failures=0, errors=0
+com.example.bab6.ui.home.HomeViewModelTest: tests=3, failures=0, errors=0
