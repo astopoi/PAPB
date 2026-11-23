@@ -1,6 +1,0 @@
-/home/astopoi/Downloads/untuk_mahasiswa/praktikum_seluler/data/misteri/misteri_1.cs8: 390 ms, 20 Msps
-1. Spektrum : lebar terisi 18,20 MHz  ->  100 RB x 180 kHz  ->  kanal LTE 20 MHz
-2. OFDM     : puncak autokorelasi di lag 1333 sampel = 66,66 us  ->  spasi subcarrier 1/T_u = 15,00 kHz
-              puncak/median = 38x (makin besar makin yakin ini OFDM)
-3. Selubung : TDD, pola on/off berulang tiap 5,0 ms, downlink 75% waktu
-Selesai: /home/astopoi/AndroidStudioProjects/bab6/docs/detektif_seluler/hasil/misteri_1_*.png

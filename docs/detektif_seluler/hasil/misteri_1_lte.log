@@ -1,9 +1,0 @@
-/home/astopoi/Downloads/untuk_mahasiswa/praktikum_seluler/data/misteri/misteri_1.cs8: 390 ms, CFO kasar +0.0 kHz
-
-PCI   N_ID_1  N_ID_2  mode  skor PSS  yakin SSS  CFO         ppm    MIB
-278   92      2       TDD   0,49      2,0x       +1,26 kHz   +0,5   20 MHz, 2 port, SFN 765-772 (8/8)
-
-EARFCN 38948. Bandingkan PCI & EARFCN dengan aplikasi info sel di ponsel.
-yakin SSS = skor kandidat terbaik / kedua terbaik; di bawah 1,5x PCI ditulis '?' (PSS terlihat, SSS tidak cukup jelas). * = PCI ditemukan lewat CRC MIB, bukan SSS.
-MIB = isi PBCH yang lolos CRC: bandwidth sel, jumlah port antena, SFN (lolos/dicoba frame).
-Selesai: /home/astopoi/AndroidStudioProjects/bab6/docs/detektif_seluler/hasil/misteri_1_*
