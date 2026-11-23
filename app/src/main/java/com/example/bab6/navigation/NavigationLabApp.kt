@@ -1,5 +1,9 @@
 package com.example.bab6.navigation
 
+import com.google.android.gms.location.LocationServices
+import com.example.bab6.data.location.DefaultLocationRepository
+import com.example.bab6.ui.location.LocationViewModel
+import com.example.bab6.ui.location.LocationScreen
 import androidx.compose.ui.platform.LocalContext
 import com.example.bab6.data.local.DatabaseProvider
 import com.example.bab6.data.preferences.DataStoreUserPreferencesRepository
@@ -38,6 +42,9 @@ fun NavigationLabApp() {
     val favoriteRepository = remember(context) {
         RoomFavoriteRepository(DatabaseProvider.getDatabase(context).favoriteStudentDao())
     }
+    val locationRepository = remember(context) {
+        DefaultLocationRepository(context, LocationServices.getFusedLocationProviderClient(context))
+    }
     val navController = rememberNavController()
     NavHost(
         navController = navController,
@@ -54,6 +61,7 @@ fun NavigationLabApp() {
                 onRetry = homeViewModel::retry,
                 onSearchQueryChange = homeViewModel::onSearchQueryChange,
                 onRefresh = homeViewModel::refresh,
+                onOpenLocation = { navController.navigate(Routes.LOCATION) },
                 onOpenFavorites = { navController.navigate(Routes.FAVORITES) },
                 onOpenProfile = { navController.navigate(Routes.PROFILE) },
                 onOpenAbout = { navController.navigate(Routes.ABOUT) }
@@ -79,6 +87,10 @@ fun NavigationLabApp() {
                 onToggleFavorite = viewModel::toggleFavorite,
                 onBack = { navController.popBackStack() }
             )
+        }
+        composable(Routes.LOCATION) {
+            val locationViewModel: LocationViewModel = viewModel(factory = LocationViewModel.factory(locationRepository))
+            LocationScreen(viewModel = locationViewModel, onBack = { navController.popBackStack() })
         }
         composable(Routes.FAVORITES) {
             val favoritesViewModel: FavoritesViewModel = viewModel(

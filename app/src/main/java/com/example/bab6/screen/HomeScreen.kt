@@ -20,6 +20,7 @@ fun HomeScreen(
     onRetry: () -> Unit,
     onSearchQueryChange: (String) -> Unit,
     onRefresh: () -> Unit,
+    onOpenLocation: () -> Unit,
     onOpenProfile: () -> Unit,
     onOpenFavorites: () -> Unit,
     onOpenAbout: () -> Unit
@@ -30,6 +31,7 @@ fun HomeScreen(
             TextButton(onClick = onOpenAbout) { Text("About") }
             TextButton(onClick = onOpenFavorites) { Text("Favorites") }
         }
+        TextButton(onClick = onOpenLocation, modifier = Modifier.padding(horizontal = 16.dp)) { Text("Buka Lokasi") }
         Row(
             modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp),
             horizontalArrangement = Arrangement.spacedBy(8.dp),
